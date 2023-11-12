@@ -63,9 +63,9 @@ Aparelho utilizado para testes:
 Execute `ng serve` para um servidor de desenvolvimento. Após isso acesse http://localhost:4200/login
 
 ## Testes realizados
-![login.png](img/login.png)
-![autenticacao.png](img/autenticacao.png)
-![tela-player.png](img/tela-player.jpeg)
+![login.png](README/img/login.png)
+![autenticacao.png](README/img/autenticacao.png)
+![tela-player.png](README/img/tela-player.jpeg)
 
 `1. Realize o Login `
 `2. Aceite os termos de Uso`
