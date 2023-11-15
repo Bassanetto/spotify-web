@@ -47,7 +47,7 @@ Este projeto vai além da simples estética visual, priorizando a usabilidade e 
 ✔️ Playlists do Usuário
 
 ## Distribuição
-Link para teste da versão disponibilizada.
+[Link para teste da versão disponibilizada.](https://www.stanley1913.com.br/produto/cuia-termica-matte-236ml-98446)
 
 ## Pré-requisitos ⚠️
 Aparelho utilizado para testes:
