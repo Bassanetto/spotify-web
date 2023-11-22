@@ -1,30 +1,89 @@
 @import 'variaveis';
 
 div{
-    padding: 5px 30px;
-    justify-content: space-between;
+  padding: 5px 30px;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  color: $cor-primaria;
+  border-top: 1px solid $preto-transparent-20;
+
+  img{
+    flex-grow: 0;
+    width: 40px;
+    height: auto;
+    border-radius: 50%;
+  }
+
+  span{
+    flex-grow: 1;
+    margin-left: 20px;
+    font-size: .9rem;
+    font-weight: 700;
+  }
+
+  .icon{
+    flex-grow: 0;
+    cursor: pointer;
+  }
+
+  .img{
+    cursor: pointer;
+  }
+
+  .modal{
+    display: flex;
     align-items: center;
-    height: 100%;
-    width: 100%;
-    color: $cor-primaria;
-    border-top: 1px solid $preto-transparent-20;
+    border: none;
+    padding-top: 0;
+    padding: 0;
+    justify-content: space-between;
+  }
 
-    img{
-        flex-grow: 0;
-        width: 40px;
-        height: auto;
-        border-radius: 50%;
-    }
+  .button-end {
+    justify-content: flex-end;
+    margin-right: 15px;
+  }
 
-    span{
-        flex-grow: 1;
-        margin-left: 20px;
-        font-size: .9rem;
-        font-weight: 700;
-    }
+  .user {
+    display: flex;
+    align-items: flex-start;
+    border: none;
+    padding: 0;
+    width: 180px;
+  }
 
-    .icon{
-        flex-grow: 0;
-        cursor: pointer;
+  .body {
+    display: flex;
+    border: none;
+    padding: 0;
+    width: 500px;
+    padding-right: 40px;
+  }
+
+  .seguidores {
+    align-items: center;
+    justify-content: flex-start;
+    margin-left: 30px;
+  }
+
+  ::ng-deep {
+    .p-inputswitch {
+      &.p-inputswitch-checked {
+        .p-inputswitch-slider {
+          background-color: $cor-primaria !important;
+        }
+      }
     }
+    &.dark-mode{
+      background-color: $cor-fundo2-dark;
+    }
+  }
+}
+
+.dark-mode {
+  ::ng-deep {
+    background-color: $cor-fundo2-dark;
+  }
 }

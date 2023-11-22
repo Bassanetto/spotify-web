@@ -4,6 +4,7 @@ import { IUsuario } from '../Interfaces/IUsuario';
 import { IArtista } from '../Interfaces/IArtista';
 import { IMusica } from '../Interfaces/IMusica';
 import { newArtista, newMusica, newPlaylist } from "./factories";
+import {IUsuarioDetalhado} from "../Interfaces/IUsuarioDetalhado";
 
 export function SpotifyUserParaUsuario(user: SpotifyApi.CurrentUsersProfileResponse): IUsuario {
     return {
@@ -11,6 +12,15 @@ export function SpotifyUserParaUsuario(user: SpotifyApi.CurrentUsersProfileRespo
         nome: user.display_name,
         imagemUrl: user.images.pop().url
     }
+}
+
+export function SpotifyUserParaUsuarioDetalhado(user: SpotifyApi.CurrentUsersProfileResponse): IUsuarioDetalhado {
+  return {
+    id: user.id,
+    nome: user.display_name,
+    imagemUrl: user.images[1].url,
+    seguidores: user.followers.total
+  }
 }
 
 export function SpotifyPlaylistParaPlaylist(playlist: SpotifyApi.PlaylistObjectSimplified): IPlaylist {
@@ -52,7 +62,7 @@ export function SpotifySingleArtistaParaArtista(spotifyArtista: SpotifyApi.Singl
 }
 
 export function SpotifyTrackParaMusica(spotifyTrack: SpotifyApi.TrackObjectFull, playing?: boolean) : IMusica {
-    
+
     if(!spotifyTrack)
         return newMusica()
 
@@ -60,7 +70,7 @@ export function SpotifyTrackParaMusica(spotifyTrack: SpotifyApi.TrackObjectFull,
         const data= addMilliseconds(new Date(0), ms);
         return format(data, 'mm:ss');
     }
-    
+
     return {
         id: spotifyTrack.uri,
         titulo: spotifyTrack.name,

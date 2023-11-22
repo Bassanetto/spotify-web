@@ -20,7 +20,7 @@ export class TopArtistasComponent implements OnInit{
   }
 
   async buscarTopArtistas() {
-    this.artistas = await this.spotifyService.buscarTopArtistas(5);  
+    this.artistas = await this.spotifyService.buscarTopArtistas(5);
   }
 
   irParaArtista(artistaId) {
@@ -28,4 +28,3 @@ export class TopArtistasComponent implements OnInit{
     this.router.navigateByUrl(`player/lista/artista/${artistaId}`);
   }
 }
-'"'
