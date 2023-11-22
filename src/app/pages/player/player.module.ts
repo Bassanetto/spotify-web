@@ -21,6 +21,7 @@ import { ListaMusicasComponent } from '../lista-musicas/lista-musicas.component'
 import { BannerComponent } from 'src/app/components/banner/banner.component';
 import { DialogModule } from 'primeng/dialog';
 import { InputSwitchModule } from 'primeng/inputswitch';
+import {ArtistasSeguidosComponent} from "../../components/artistas-seguidos/artistas-seguidos.component";
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { InputSwitchModule } from 'primeng/inputswitch';
     HomeComponent,
     DashboardComponent,
     ArtistasComponent,
+    ArtistasSeguidosComponent,
     TopArtistaComponent,
     PainelDireitoComponent,
     BuscasRecentesComponent,

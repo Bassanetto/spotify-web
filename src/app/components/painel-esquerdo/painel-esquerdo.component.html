@@ -1,11 +1,12 @@
 <div class="menus flex">
   <div class="image-container flex flex-center">
-    <img src="assets/images/spotify-logo.png" srcset="">
+    <img alt="logo" src="assets/images/spotify-logo.png" srcset="">
   </div>
 
   <div class="menu-container flex opcoes">
 
-    <app-botao-menu [descricao]="'Home'" [selecionado]="menuSelecionado === 'Home'" (click)="botaoClick('Home')">
+    <app-botao-menu [descricao]="'Home'" [selecionado]="menuSelecionado === 'Home'"
+                    (click)="botaoClickHome('Home')">
       <fa-icon [icon]="homeIcone"></fa-icon>
     </app-botao-menu>
 
